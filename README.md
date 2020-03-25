@@ -16,7 +16,7 @@ Feel free to submit any contributions
 
 ### Author
 
-[Herick Ribeiro][https://www.linkedin.com/in/herick-leite-ribeiro-06355818/?locale=en_US]
+[Herick Ribeiro](https://www.linkedin.com/in/herick-leite-ribeiro-06355818/?locale=en_US)
 
 ### Donations
 
