@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+*
+{
+	box-sizing: border-box;
+	color: rgb(0,0,0);
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	text-align: left;
+	text-decoration: none;
+	text-transform: none;
+	vertical-align: baseline;
+	zoom: 1;
+	white-space: nowrap;
+}
+html, body
+{
+	height: 100%;
+	overflow: hidden;
+	width: 100%;
+}
+br
+{
+	clear: both;
+	line-height: 1.5ex;
+}
+form,
+pre
+{
+	margin: 1em;
+}
+button[type="reset"],
+button[type="submit"]
+{
+	border: 0;
+	border-radius: 4px;
+	color: rgb(255,255,255);
+	font-weight: bold;
+	margin: auto;
+	padding: 0.5ex 1ex;
+}
+button[type="reset"]
+{
+	background-color: rgb(220,53,69);
+	float: left;
+}
+button[type="submit"]
+{
+	background-color: rgb(40,167,69);
+	float: right;
+}
+:focus
+{
+	outline: 0
+}
+
+.bold
+{
+	font-weight: bold;
+}
+.w100
+{
+	width: 100%;
+}
+.w80
+{
+	width: 80%;
+}
+.w20
+{
+	width: 20%;
+}
+.container_fluid_cells > div
+{
+	float: left;
+	width: 11em;
+}
+
+#form_container,
+#response_container
+{
+	bottom: 0;
+	overflow: auto;
+	position: absolute;
+	top: 0;
+	width: 50%;
+}
+#form_container
+{
+	background-color: rgb(247,247,247);
+	left: 0;
+}
+#response_container
+{
+	background-color: rgb(0,0,0);
+	color: rgb(255,255,255);
+	left: 50%;
+}
+#response_container pre
+{
+	color: rgb(255,255,255);
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 14px;
+	font-weight: bold;
+	white-space: pre-wrap;
+}
