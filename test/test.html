@@ -1,153 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Parse raw HTTP request - test</title>
-		<link rel="stylesheet" href="test.css">
-	</head>
-	<body>
-		<div id="form_container">
-			<form action="test.php" method="put">
-				<label for="name" class="bold">Name</label>
-				<br>
-				<input type="text" name="name" id="name" placeholder="complete name" class="w100">
-				<br><br>
-				<label class="bold">Gender</label>
-				<br>
-				<div class="container_fluid_cells">
-					<div>
-						<input type="radio" name="gender" id="gender_m" value="M" checked> <label for="gender_m">Male</label>
-					</div>
-					<div>
-						<input type="radio" name="gender" id="gender_f" value="F"> <label for="gender_f">Female</label>
-					</div>
-				</div>
-				<br><br>
-				<label class="bold">Favorites music styles</label>
-				<br>
-				<div class="container_fluid_cells">
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_blues" value="blues"> <label for="music_blues">Blues</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_classical" value="classical"> <label for="music_classical">Classical</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_country" value="country"> <label for="music_country">Country</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_dance" value="dance"> <label for="music_dance">Dance</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_drum_and_bass" value="drum_and_bass"> <label for="music_drum_and_bass">Drum and Bass</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_dubstep" value="dubstep"> <label for="music_dubstep">Dubstep</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_easy_listening" value="easy_listening"> <label for="music_easy_listening">Easy Listening</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_emo" value="emo"> <label for="music_emo">Emo</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_funk" value="funk"> <label for="music_funk">Funk</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_folk" value="folk"> <label for="music_folk">Folk</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_garage" value="garage"> <label for="music_garage">Garage</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_grunge" value="grunge"> <label for="music_grunge">Grunge</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_grime" value="grime"> <label for="music_grime">Grime</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_hip_hop" value="hip_hop"> <label for="music_hip_hop">Hip Hop</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_indie" value="indie"> <label for="music_indie">Indie</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_jazz" value="jazz"> <label for="music_jazz">Jazz</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_latin" value="latin"> <label for="music_latin">Latin</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_metal" value="metal"> <label for="music_metal">Metal</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_motown" value="motown"> <label for="music_motown">Motown</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_mod" value="mod"> <label for="music_mod">Mod</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_opera" value="opera"> <label for="music_opera">Opera</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_pop" value="pop"> <label for="music_pop">Pop</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_punk" value="punk"> <label for="music_punk">Punk</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_rap" value="rap"> <label for="music_rap">Rap</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_reggae" value="reggae"> <label for="music_reggae">Reggae</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_rhythm_and+blues" value="rhythm_and+blues"> <label for="music_rhythm_and+blues">Rhythm and Blues</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_rock" value="rock"> <label for="music_rock">Rock</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_soul" value="soul"> <label for="music_soul">Soul</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_techno" value="techno"> <label for="music_techno">Techno</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_trance" value="trance"> <label for="music_trance">Trance</label>
-					</div>
-					<div>
-						<input type="checkbox" name="music_style[]" id="music_world" value="world"> <label for="music_world">World</label>
-					</div>
-				</div>
-				<br><br>
-				<label class="bold">Phone numbers</label>
-				<br>
-				<input type="tel" name="phone[1][number]" maxlength="12" placeholder="first number" class="w20"> <input type="text" name="phone[1][note]" placeholder="some annotation" class="w80">
-				<br>
-				<input type="tel" name="phone[2][number]" maxlength="12" placeholder="second number" class="w20"> <input type="text" name="phone[2][note]" placeholder="some annotation" class="w80">
-				<br>
-				<input type="tel" name="phone[3][number]" maxlength="12" placeholder="third number" class="w20"> <input type="text" name="phone[3][note]" placeholder="some annotation" class="w80">
-				<br><br>
-				<label for="file1" class="bold">One file</label>
-				<br>
-				<input type="file" name="file1" id="file1" placeholder="one file to upload" class="w100">
-				<br><br>
-				<label for="file2" class="bold">Another file</label>
-				<br>
-				<input type="file" name="file2" id="file2" placeholder="another file to upload" class="w100">
-				<br><br>
-				<div>
-					<button type="reset">Reset</button>
-					<button type="submit">Send</button>
-					<br>
-				</div>
-			</form>
-		</div>
-		<div id="response_container">
-			<pre>{}</pre>
-		</div>
-		<script src="test.js"></script>
-	</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Parse raw HTTP request - test</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+    <div id="form_container">
+        <form action="test.php" method="put">
+            <label for="name" class="bold">Name</label>
+            <br>
+            <input type="text" name="name" id="name" placeholder="complete name" class="w100">
+            <br><br>
+            <label class="bold">Gender</label>
+            <br>
+            <div class="container_fluid_cells">
+                <div>
+                    <input type="radio" name="gender" id="gender_m" value="M" checked> <label for="gender_m">Male</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender" id="gender_f" value="F"> <label for="gender_f">Female</label>
+                </div>
+            </div>
+            <br><br>
+            <label class="bold">Favorites music styles</label>
+            <br>
+            <div class="container_fluid_cells">
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_blues" value="blues"> <label for="music_blues">Blues</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_classical" value="classical"> <label for="music_classical">Classical</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_country" value="country"> <label for="music_country">Country</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_dance" value="dance"> <label for="music_dance">Dance</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_drum_and_bass" value="drum_and_bass"> <label for="music_drum_and_bass">Drum and Bass</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_dubstep" value="dubstep"> <label for="music_dubstep">Dubstep</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_easy_listening" value="easy_listening"> <label for="music_easy_listening">Easy Listening</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_emo" value="emo"> <label for="music_emo">Emo</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_funk" value="funk"> <label for="music_funk">Funk</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_folk" value="folk"> <label for="music_folk">Folk</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_garage" value="garage"> <label for="music_garage">Garage</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_grunge" value="grunge"> <label for="music_grunge">Grunge</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_grime" value="grime"> <label for="music_grime">Grime</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_hip_hop" value="hip_hop"> <label for="music_hip_hop">Hip Hop</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_indie" value="indie"> <label for="music_indie">Indie</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_jazz" value="jazz"> <label for="music_jazz">Jazz</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_latin" value="latin"> <label for="music_latin">Latin</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_metal" value="metal"> <label for="music_metal">Metal</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_motown" value="motown"> <label for="music_motown">Motown</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_mod" value="mod"> <label for="music_mod">Mod</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_opera" value="opera"> <label for="music_opera">Opera</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_pop" value="pop"> <label for="music_pop">Pop</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_punk" value="punk"> <label for="music_punk">Punk</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_rap" value="rap"> <label for="music_rap">Rap</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_reggae" value="reggae"> <label for="music_reggae">Reggae</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_rhythm_and+blues" value="rhythm_and+blues"> <label for="music_rhythm_and+blues">Rhythm and Blues</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_rock" value="rock"> <label for="music_rock">Rock</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_soul" value="soul"> <label for="music_soul">Soul</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_techno" value="techno"> <label for="music_techno">Techno</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_trance" value="trance"> <label for="music_trance">Trance</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="music_style[]" id="music_world" value="world"> <label for="music_world">World</label>
+                </div>
+            </div>
+            <br><br>
+            <label class="bold">Phone numbers</label>
+            <br>
+            <input type="tel" name="phone[1][number]" maxlength="12" placeholder="first number" class="w20"> <input type="text" name="phone[1][note]" placeholder="some annotation" class="w80">
+            <br>
+            <input type="tel" name="phone[2][number]" maxlength="12" placeholder="second number" class="w20"> <input type="text" name="phone[2][note]" placeholder="some annotation" class="w80">
+            <br>
+            <input type="tel" name="phone[3][number]" maxlength="12" placeholder="third number" class="w20"> <input type="text" name="phone[3][note]" placeholder="some annotation" class="w80">
+            <br><br>
+            <label for="file1" class="bold">One file</label>
+            <br>
+            <input type="file" name="file1" id="file1" placeholder="one file to upload" class="w100">
+            <br><br>
+            <label for="file2" class="bold">Another file</label>
+            <br>
+            <input type="file" name="file2" id="file2" placeholder="another file to upload" class="w100">
+            <br><br>
+            <div>
+                <button type="reset">Reset</button>
+                <button type="submit">Send</button>
+                <br>
+            </div>
+        </form>
+    </div>
+    <div id="response_container">
+        <pre>{}</pre>
+    </div>
+    <script src="test.js"></script>
+</body>
+
 </html>
